@@ -18,7 +18,7 @@ def ls():
 def echo():
     if x[5::] == '$HOME':
         print(os.path.expanduser('~'))
-    elif '"' in x and '"' in x:
+    elif x.count('"') == 2 and x[-1] == '"' and x[5] == '"':
             print(x[6:-1])
     else:
          print('Invalid syntax')
